@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{% seo %}
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="alternate" type="application/atom+xml" title="Willow Window Fashions Blog" href="/blog/feed.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1f1c19;--muted:#6f675e;--line:#e6dfd3;--gold:#b39566;--gold-2:#6b5537;--soft:#f1ece3;--cream:#faf8f4}
+*{box-sizing:border-box;margin:0}
+body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.7}
+a{color:inherit}
+img{max-width:100%;height:auto;display:block}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;line-height:1.15}
+header{border-bottom:1px solid var(--line);background:rgba(250,248,244,.96);position:sticky;top:0;z-index:10}
+.bar{max-width:1100px;margin:0 auto;padding:0 20px;height:72px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{font-family:"Cormorant Garamond",serif;font-size:1.7rem;font-weight:600;text-decoration:none;white-space:nowrap}
+.logo span{color:var(--gold);font-style:italic}
+nav{display:flex;gap:22px;align-items:center}
+nav a{text-decoration:none;text-transform:uppercase;letter-spacing:.14em;font-size:.72rem;font-weight:500;white-space:nowrap}
+.btn{display:inline-block;background:var(--ink);color:#fff;text-decoration:none;border-radius:2px;padding:12px 22px;font-weight:600;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase}
+.btn:hover{background:var(--gold-2)}
+.eyebrow{text-transform:uppercase;letter-spacing:.28em;font-size:.7rem;font-weight:600;color:var(--gold);margin-bottom:12px}
+main{max-width:1100px;margin:0 auto;padding:56px 20px 90px}
+.hdr{max-width:720px;margin-bottom:44px}
+.hdr h1{font-size:clamp(2.4rem,5vw,3.6rem)}
+.hdr p{color:var(--muted);margin-top:12px;font-size:1.08rem}
+.posts{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:28px}
+.post-card{background:#fff;border-radius:4px;overflow:hidden;text-decoration:none;box-shadow:0 20px 50px -38px rgba(31,28,25,.45);transition:.25s;display:flex;flex-direction:column}
+.post-card:hover{transform:translateY(-4px)}
+.post-card .thumb{aspect-ratio:16/10;background:linear-gradient(135deg,var(--soft),#e2d8c6);overflow:hidden}
+.post-card .thumb img{width:100%;height:100%;object-fit:cover}
+.post-card .body{padding:22px 24px 26px}
+.post-card h2{font-size:1.55rem;margin:6px 0 8px}
+.post-card p{color:var(--muted);font-size:.93rem}
+.meta{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-2);font-weight:600}
+.empty{color:var(--muted)}
+article{max-width:740px;margin:0 auto}
+article .cover{border-radius:4px;margin:28px 0 36px;aspect-ratio:16/9;object-fit:cover;width:100%}
+article h1{font-size:clamp(2.3rem,5vw,3.4rem);margin-top:8px}
+.prose{font-size:1.06rem}
+.prose>*+*{margin-top:1.1em}
+.prose h2{font-size:2rem;margin-top:1.8em}
+.prose h3{font-size:1.5rem;margin-top:1.5em}
+.prose ul,.prose ol{padding-left:1.3em}
+.prose li+li{margin-top:.4em}
+.prose a{color:var(--gold-2);text-underline-offset:3px}
+.prose blockquote{border-left:2px solid var(--gold);padding-left:18px;color:var(--muted);font-style:italic}
+.prose img{border-radius:4px}
+.cta{margin-top:56px;background:var(--ink);color:#efe8dc;border-radius:4px;padding:36px}
+.cta h2{color:#fff;font-size:1.9rem}
+.cta p{color:#cfc5b6;margin:10px 0 22px}
+.cta .btn{background:var(--gold);color:var(--ink)}
+.back{display:inline-block;margin-bottom:10px;font-size:.8rem;text-decoration:none;color:var(--muted)}
+footer{text-align:center;padding:34px 20px;font-size:.82rem;color:var(--muted);border-top:1px solid var(--line)}
+footer a{text-decoration:none}
+@media(max-width:760px){nav a:not(.btn){display:none}.logo{font-size:1.4rem}}
+</style>
+</head>
+<body>
+<header><div class="bar">
+  <a class="logo" href="/">Willow <span>Window Fashions</span></a>
+  <nav>
+    <a href="/#shutters">Plantation Shutters</a>
+    <a href="/#products">Products</a>
+    <a href="/blog/">Blog</a>
+    <a class="btn" href="/consultation.html">Free Consultation</a>
+  </nav>
+</div></header>
+<main>
+{{ content }}
+</main>
+<footer>© {{ site.time | date: "%Y" }} Willow Window Fashions · Roberts Plaza, 655 US-9, Bayville, NJ 08721 · <a href="tel:+17322379100">(732) 237-9100</a> · <a href="/">Home</a></footer>
+</body>
+</html>

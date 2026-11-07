@@ -1,0 +1,25 @@
+title: Willow Window Fashions
+description: Custom plantation shutters, blinds, shades and motorized window coverings in Bayville, NJ, serving Ocean & Monmouth County and the Jersey Shore since 1988.
+url: https://www.willowwindowfashions.com
+lang: en_US
+author: Willow Window Fashions
+logo: /images/hero.jpg
+image: /images/hero.jpg
+social:
+  name: Willow Window Fashions
+permalink: /blog/:title/
+timezone: America/New_York
+markdown: kramdown
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+feed:
+  path: blog/feed.xml
+defaults:
+  - scope: { path: "", type: posts }
+    values: { layout: post, image: /images/hero.jpg }
+exclude:
+  - HOW-TO-POST.md
+  - README.md
+  - .gitignore

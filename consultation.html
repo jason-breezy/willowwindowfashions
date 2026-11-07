@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
+<meta charset="utf-8"><link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Book a Free Consultation | Willow Window Fashions</title>
 <meta name="description" content="Book a free in-home consultation with Willow Window Fashions in Bayville, NJ. Plantation shutters, blinds, shades and motorized window coverings.">
@@ -71,12 +71,14 @@ footer{text-align:center;padding:30px 20px;font-size:.8rem;color:var(--muted);bo
     <div class="aside"><b>Showroom</b><br>Roberts Plaza, 655 US-9, Bayville, NJ 08721<br>Serving Ocean &amp; Monmouth County and the Jersey Shore</div>
   </div>
 
-  <!-- Intake submissions are forwarded to Ivan by FormSubmit. After activation, swap the action URL for FormSubmit's private alias so no address appears in the page source. -->
-  <form id="intake" action="#" method="POST">
-    <input type="hidden" name="_subject" value="New consultation request - willowwindowfashions.com">
-    <input type="hidden" name="_template" value="table">
-    <input type="hidden" name="_next" value="https://www.willowwindowfashions.com/thanks.html">
-    <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+  <!-- Intake submissions are delivered to Ivan by Web3Forms. The access key is not an email address and is safe to publish. -->
+  <form id="intake" action="https://api.web3forms.com/submit" method="POST">
+    <input type="hidden" name="access_key" value="WEB3FORMS_ACCESS_KEY">
+    <input type="hidden" name="subject" value="New consultation request - willowwindowfashions.com">
+    <input type="hidden" name="from_name" value="Willow Window Fashions website">
+    <input type="hidden" name="redirect" value="https://www.willowwindowfashions.com/thanks.html">
+    <input type="hidden" name="Interested in" id="interests" value="">
+    <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
 
     <fieldset>
       <legend>About you</legend>
@@ -100,13 +102,13 @@ footer{text-align:center;padding:30px 20px;font-size:.8rem;color:var(--muted);bo
       <legend>Your project</legend>
       <span style="font-size:.78rem;font-weight:600;letter-spacing:.04em">What are you interested in? <small style="font-weight:400;color:var(--muted)">Choose any</small></span>
       <div class="checks">
-        <label class="sig"><input type="checkbox" name="Interested in" value="Plantation shutters">Plantation shutters<em>Signature</em></label>
-        <label><input type="checkbox" name="Interested in" value="Roller / solar shades">Roller &amp; solar shades</label>
-        <label><input type="checkbox" name="Interested in" value="Cellular shades">Cellular shades</label>
-        <label><input type="checkbox" name="Interested in" value="Roman shades">Roman shades</label>
-        <label><input type="checkbox" name="Interested in" value="Wood / faux wood blinds">Wood &amp; faux wood blinds</label>
-        <label><input type="checkbox" name="Interested in" value="Motorized / smart">Motorized &amp; smart</label>
-        <label><input type="checkbox" name="Interested in" value="Not sure yet">Not sure yet</label>
+        <label class="sig"><input type="checkbox" data-interest value="Plantation shutters">Plantation shutters<em>Signature</em></label>
+        <label><input type="checkbox" data-interest value="Roller / solar shades">Roller &amp; solar shades</label>
+        <label><input type="checkbox" data-interest value="Cellular shades">Cellular shades</label>
+        <label><input type="checkbox" data-interest value="Roman shades">Roman shades</label>
+        <label><input type="checkbox" data-interest value="Wood / faux wood blinds">Wood &amp; faux wood blinds</label>
+        <label><input type="checkbox" data-interest value="Motorized / smart">Motorized &amp; smart</label>
+        <label><input type="checkbox" data-interest value="Not sure yet">Not sure yet</label>
       </div>
       <label>Tell us about your project <small>(optional)</small><textarea name="Notes" rows="3" placeholder="Arched windows, bathroom privacy, blocking afternoon sun…"></textarea></label>
     </fieldset>
@@ -117,7 +119,7 @@ footer{text-align:center;padding:30px 20px;font-size:.8rem;color:var(--muted);bo
 </main>
 
 <footer>© <span id="yr">2026</span> Willow Window Fashions · Bayville, NJ · <a href="/">Home</a></footer>
-<script>document.getElementById('intake').addEventListener('submit',function(){this.action='https://formsubmit.co/'+atob('aXZhbjYzM0Btc24uY29t')});</script>
+<script>document.getElementById('intake').addEventListener('submit',function(){document.getElementById('interests').value=[...this.querySelectorAll('[data-interest]:checked')].map(function(c){return c.value}).join(', ')||'Not specified'});</script>
 <script>document.getElementById('yr').textContent=new Date().getFullYear()</script>
 </body>
 </html>

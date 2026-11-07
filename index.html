@@ -198,6 +198,9 @@ nav ul{gap:22px}.logo{margin-right:28px}
 .card.feature h3{color:var(--plum-2)}
 .card.feature a{color:var(--plum-2);font-weight:600;text-decoration:none}
 .sig{position:absolute;top:14px;left:14px;z-index:2;background:var(--gold);color:#1f1c19;font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600;padding:6px 12px;border-radius:2px}
+.cta-card{background:#fff;border-radius:4px;padding:40px;box-shadow:0 30px 70px -45px rgba(31,28,25,.45)}
+.cta-card h3{font-size:2.1rem;margin-bottom:12px}.cta-card p{color:var(--muted)}
+.cta-card .btn{margin:26px 0 14px}.cta-card .fine{font-size:.85rem}
 /* shutter collection */
 .shut{background:#1f1c19;color:#efe8dc;padding:110px 0}
 .shut h2{color:#fff}.shut .eyebrow{color:var(--gold)}
@@ -235,7 +238,7 @@ nav ul{gap:22px}.logo{margin-right:28px}
  "@context":"https://schema.org","@type":"HomeAndConstructionBusiness",
  "name":"Willow Window Fashions","url":"https://www.willowwindowfashions.com/",
  "description":"Custom blinds, shades, shutters and motorized window coverings with in-home consultation and professional installation.",
- "telephone":"+1-732-237-9100","email":"ivan633@msn.com",
+ "telephone":"+1-732-237-9100",
  "address":{"@type":"PostalAddress","streetAddress":"655 US-9, Roberts Plaza","addressLocality":"Bayville","addressRegion":"NJ","postalCode":"08721","addressCountry":"US"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"2"},
  "areaServed":"Ocean County & Monmouth County, NJ","priceRange":"$$"
 }
@@ -256,7 +259,7 @@ nav ul{gap:22px}.logo{margin-right:28px}
         <li><a href="#gallery">Gallery</a></li>
         <li><a href="#reviews">Reviews</a></li>
         <li><a href="#faq">FAQ</a></li>
-        <li><a class="btn" href="#quote">Free Consultation</a></li>
+        <li><a class="btn" href="consultation.html">Free Consultation</a></li>
       </ul>
     </nav>
   </div>
@@ -270,7 +273,7 @@ nav ul{gap:22px}.logo{margin-right:28px}
       <h1>Window fashions, beautifully made for your home.</h1>
       <p>Our signature plantation shutters, plus blinds, shades and motorized coverings, all measured and installed by Ivan, who learned the trade at Levolor in 1978 and founded Willow in 1988. Serving the Jersey Shore from Bayville since 2000.</p>
       <div class="cta">
-        <a class="btn" href="#quote">Book a Free Consultation</a>
+        <a class="btn" href="consultation.html">Book a Free Consultation</a>
         <a class="btn ghost" href="#shutters">Plantation Shutters</a>
       </div>
       <div><a class="gbadge" href="https://www.google.com/maps/search/Willow+Window+Fashions+Bayville+NJ" target="_blank" rel="noopener"><span class="g">G</span><span class="s">★★★★★</span> Rated on Google</a></div>
@@ -305,7 +308,7 @@ nav ul{gap:22px}.logo{margin-right:28px}
         <li>Made to fit arches, bay windows, sliders and specialty shapes</li>
         <li>A lasting upgrade that adds real value to your home</li>
       </ul>
-      <a class="btn" href="#quote">Book a Shutter Consultation</a>
+      <a class="btn" href="consultation.html">Book a Shutter Consultation</a>
     </div>
   </div>
 </section>
@@ -451,35 +454,21 @@ nav ul{gap:22px}.logo{margin-right:28px}
     <div>
       <p class="eyebrow">Get started</p>
       <h2>Book your free consultation</h2>
-      <p class="lead" style="margin-top:14px">Tell us a little about your project and we'll be in touch within one business day.</p>
+      <p class="lead" style="margin-top:14px">Every project starts with a free visit from Ivan: samples in your own light, exact measurements and an honest quote.</p>
       <ul class="info" style="padding:0;margin-top:24px">
         <li><b>Phone</b><a href="tel:+17322379100">(732) 237-9100</a></li>
-        <li><b>Email</b><a href="mailto:ivan633@msn.com">ivan633@msn.com</a></li>
         <li><b>Showroom</b><a href="https://www.google.com/maps/search/Willow+Window+Fashions+Bayville+NJ" target="_blank" rel="noopener">Roberts Plaza, 655 US-9<br>Bayville, NJ 08721</a></li>
         <li><b>Service area</b>Ocean &amp; Monmouth County and the Jersey Shore</li>
         <li><b>Hours</b>Call or book online for an appointment</li>
       </ul>
     </div>
-    <!-- Leads are emailed to Ivan via FormSubmit. The first submission sends a one-time activation email to ivan633@msn.com -->
-    <form action="https://formsubmit.co/ivan633@msn.com" method="POST">
-      <div class="row">
-        <label>Name<input name="name" required autocomplete="name"></label>
-        <label>Phone<input name="phone" type="tel" autocomplete="tel"></label>
-      </div>
-      <input type="hidden" name="_subject" value="New consultation request - willowwindowfashions.com">
-      <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_next" value="https://www.willowwindowfashions.com/thanks.html">
-      <input type="text" name="_honey" style="display:none">
-      <label>Email<input name="email" type="email" required autocomplete="email"></label>
-      <div class="row">
-        <label>What are you interested in?
-          <select name="product"><option>Not sure yet</option><option>Roller shades</option><option>Cellular shades</option><option>Wood / faux wood blinds</option><option>Roman shades</option><option>Shutters</option><option>Motorized / smart</option></select>
-        </label>
-        <label>Number of windows<input name="windows" type="number" min="1" placeholder="e.g. 6"></label>
-      </div>
-      <label>Anything else we should know?<textarea name="message" rows="4"></textarea></label>
-      <button class="btn" type="submit">Request My Free Consultation</button>
-    </form>
+    <div class="cta-card">
+      <p class="eyebrow">Free in-home consultation</p>
+      <h3>Tell us about your project</h3>
+      <p>Answer a few quick questions about your home and the look you want. Ivan will call you, usually within one business day, to set up a visit with samples.</p>
+      <a class="btn" href="consultation.html">Book My Free Consultation</a>
+      <p class="fine">Or call <a href="tel:+17322379100">(732) 237-9100</a></p>
+    </div>
   </div>
 </section>
 </main>
@@ -490,7 +479,7 @@ nav ul{gap:22px}.logo{margin-right:28px}
     <div class="foot">
       <div><a class="logo" href="#top">Willow <span>Window Fashions</span></a><p style="margin-top:8px;max-width:320px">Roberts Plaza, 655 US-9, Bayville, NJ 08721<br><br>Custom blinds, shades and window coverings, beautifully made and expertly installed.</p></div>
       <div><p><a href="#products">Products</a><br><a href="#process">How It Works</a><br><a href="#gallery">Gallery</a><br><a href="#faq">FAQ</a></p></div>
-      <div><p>(732) 237-9100<br>ivan633@msn.com<br>www.willowwindowfashions.com</p></div>
+      <div><p>(732) 237-9100<br>www.willowwindowfashions.com</p></div>
     </div>
     <p class="copy">© <span id="yr">2026</span> Willow Window Fashions. All rights reserved.</p>
   </div>

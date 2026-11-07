@@ -16,9 +16,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --lilac:#b9a4d6; --lilac-soft:#f1ecf8; --plum:#3d2a5c; --plum-2:#5a3f85;
-  --cream:#fbf9f6; --ink:#2a2233; --muted:#6b6275; --line:#e4dcef; --gold:#c9a24b;
-  --radius:16px;
+  --lilac:#b39566; --lilac-soft:#f1ece3; --plum:#1f1c19; --plum-2:#6b5537;
+  --cream:#faf8f4; --ink:#1f1c19; --muted:#6f675e; --line:#e6dfd3; --gold:#b39566;
+  --radius:4px;
 }
 *{box-sizing:border-box;margin:0}
 html{scroll-behavior:smooth}
@@ -166,6 +166,52 @@ footer a{text-decoration:none}footer a:hover{color:#fff}
 @media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}.marq,.hero .ph{animation:none}}
 @media(max-width:900px){.about-grid,.story{grid-template-columns:1fr}}
 @media(max-width:560px){.person{grid-template-columns:1fr}.flip{max-width:220px;margin:auto}.stats{gap:30px}}
+
+/* lux overrides */
+h1,h2,h3{font-weight:500;letter-spacing:.005em}
+h1{font-size:clamp(2.8rem,6.2vw,5rem)}
+.eyebrow{letter-spacing:.28em;font-size:.7rem;color:var(--gold)}
+.btn{border-radius:2px;text-transform:uppercase;letter-spacing:.14em;font-size:.78rem;padding:16px 30px}
+.nav .btn{padding:11px 20px;font-size:.72rem}
+nav a{text-transform:uppercase;letter-spacing:.14em;font-size:.72rem}
+.logo{letter-spacing:.02em}
+.hero{background:linear-gradient(180deg,#f3eee6,var(--cream))}
+.hero .ph{box-shadow:0 40px 80px -40px rgba(31,28,25,.55)}
+.hero .ph::before{content:"";position:absolute;inset:14px;border:1px solid rgba(255,255,255,.55);z-index:2;pointer-events:none}
+.card{border-color:transparent;box-shadow:0 1px 0 var(--line)}
+.card h3{font-size:1.6rem}
+.band{background:#1f1c19}.band .lead,.feat p{color:#cfc5b6}
+.rev{border:0;box-shadow:0 20px 50px -35px rgba(31,28,25,.35)}
+.stars{color:var(--gold)}
+.marq span{color:#b6aa98;font-style:italic}
+.badges span::before{color:var(--gold)}
+.person{grid-template-columns:1fr}
+.fab{border-radius:2px;letter-spacing:.1em;text-transform:uppercase;font-size:.75rem}
+.logo,nav a{white-space:nowrap}
+nav ul{gap:22px}.logo{margin-right:28px}
+@media(max-width:1240px){
+  .burger{display:block}
+  nav ul{display:none;position:absolute;top:72px;left:0;right:0;background:var(--cream);flex-direction:column;padding:20px;border-bottom:1px solid var(--line);gap:18px}
+  nav ul.open{display:flex}
+}
+/* shutter collection */
+.shut{background:#1f1c19;color:#efe8dc;padding:110px 0}
+.shut h2{color:#fff}.shut .eyebrow{color:var(--gold)}
+.shut-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:center}
+.shut-imgs{position:relative}
+.shut-imgs .ph{aspect-ratio:4/3;border-radius:2px}
+.shut-imgs .ph.sm{position:absolute;width:42%;aspect-ratio:3/4;right:-26px;bottom:-56px;border:6px solid #1f1c19}
+.shut p.lead{color:#cfc5b6;margin:18px 0 26px}
+.shut ul{list-style:none;padding:0;margin:0 0 34px;display:grid;gap:14px}
+.shut li{padding-left:28px;position:relative;color:#e8e0d2}
+.shut li::before{content:"";position:absolute;left:0;top:.75em;width:16px;height:1px;background:var(--gold)}
+.shut .btn{background:var(--gold);border-color:var(--gold);color:#1f1c19}
+.shut .btn:hover{background:#fff;border-color:#fff}
+.coastal{display:grid;grid-template-columns:1fr 1fr;gap:0;background:var(--lilac-soft)}
+.coastal .ph{border-radius:0;min-height:420px}
+.coastal div.txt{padding:70px 56px;align-self:center}
+.coastal p{color:var(--muted);margin-top:14px}
+@media(max-width:900px){.shut-grid,.coastal{grid-template-columns:1fr}.shut-imgs .ph.sm{display:none}.coastal div.txt{padding:48px 20px}}
 @media(max-width:900px){
   section{padding:60px 0}
   .hero-grid,.contact-grid{grid-template-columns:1fr;gap:36px}
@@ -199,6 +245,7 @@ footer a{text-decoration:none}footer a:hover{color:#fff}
     <nav>
       <button class="burger" aria-label="Menu" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
       <ul id="menu" onclick="this.classList.remove('open')">
+        <li><a href="#shutters">Shutters</a></li>
         <li><a href="#products">Products</a></li>
         <li><a href="#about">Our Story</a></li>
         <li><a href="#process">How It Works</a></li>
@@ -215,17 +262,17 @@ footer a{text-decoration:none}footer a:hover{color:#fff}
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <p class="eyebrow">Custom window coverings</p>
-      <h1>Window treatments that finish the room.</h1>
-      <p>Blinds, shades, shutters and smart motorized coverings, measured, made and installed by people who care how your home looks and feels.</p>
+      <p class="eyebrow">Plantation shutters · Custom window fashions</p>
+      <h1>Plantation shutters, crafted for your home.</h1>
+      <p>Custom shutters, shades and blinds, measured and installed by Ivan, with 40 years in the trade. Serving the Jersey Shore from Bayville since 2002.</p>
       <div class="cta">
         <a class="btn" href="#quote">Book a Free Consultation</a>
-        <a class="btn ghost" href="#gallery">See Our Work</a>
+        <a class="btn ghost" href="#shutters">Explore Shutters</a>
       </div>
       <div><a class="gbadge" href="https://www.google.com/maps/search/Willow+Window+Fashions+Bayville+NJ" target="_blank" rel="noopener"><span class="g">G</span><span class="s">★★★★★</span> Rated on Google</a></div>
       <div class="badges"><span>Free in-home measuring</span><span>Professional installation</span><span>Fast, friendly quotes</span></div>
     </div>
-    <div class="ph" data-label="Add images/hero.jpg"><img src="images/hero.jpg" alt="Plantation shutters installed in a marble bathroom by Willow Window Fashions" onerror="this.remove()"></div>
+    <div class="ph" data-label="Add images/hero.jpg"><img src="images/hero.jpg" alt="Light-filled living room with arched windows and plantation shutters" onerror="this.remove()"></div>
   </div>
 </section>
 
@@ -238,6 +285,37 @@ footer a{text-decoration:none}footer a:hover{color:#fff}
   </div>
 </div>
 
+<section id="shutters" class="shut">
+  <div class="wrap shut-grid">
+    <div class="shut-imgs rv">
+      <div class="ph" data-label="images/shutters-bath.jpg"><img src="images/shutters-bath.jpg" alt="Custom plantation shutters in a marble bathroom, installed by Willow" onerror="this.remove()"></div>
+      <div class="ph sm" data-label="images/shutters-light.jpg"><img src="images/shutters-light.jpg" alt="Evening light through shutter louvers" onerror="this.remove()"></div>
+    </div>
+    <div class="rv">
+      <p class="eyebrow">The shutter collection</p>
+      <h2>Our specialty: plantation shutters</h2>
+      <p class="lead">Shutters are the one window treatment that becomes part of the house. Ivan has been fitting them for four decades, and every set is custom made for your exact openings.</p>
+      <ul>
+        <li>Hardwood and moisture-resistant composite, ideal for shore homes, kitchens and baths</li>
+        <li>Classic and wide louver sizes, from traditional to modern</li>
+        <li>Hidden tilt options for a clean, uninterrupted look</li>
+        <li>Made to fit arches, bay windows, sliders and specialty shapes</li>
+        <li>A lasting upgrade that adds real value to your home</li>
+      </ul>
+      <a class="btn" href="#quote">Book a Shutter Consultation</a>
+    </div>
+  </div>
+</section>
+
+<section class="coastal" style="padding:0">
+  <div class="ph" data-label="images/shutters-coastal.jpg"><img src="images/shutters-coastal.jpg" alt="Coastal bedroom with white plantation shutters" onerror="this.remove()"></div>
+  <div class="txt rv">
+    <p class="eyebrow">Made for the Shore</p>
+    <h2>Light, privacy and salt air, handled</h2>
+    <p>From Barnegat Bay to the boardwalk, shore homes need coverings that stand up to sun and humidity and still look beautiful. Shutters do exactly that, which is why they're the first thing Ivan recommends for beach houses and rentals.</p>
+  </div>
+</section>
+
 <section id="products">
   <div class="wrap">
     <div class="center">
@@ -246,12 +324,12 @@ footer a{text-decoration:none}footer a:hover{color:#fff}
       <p class="lead">From light-filtering to total blackout, classic to fully automated. We'll help you pick what fits your home and your budget.</p>
     </div>
     <div class="grid3">
+      <article class="card"><div class="ph" data-label="images/shutters.jpg"><img src="images/shutters.jpg" alt="Plantation shutters" onerror="this.remove()"></div><div class="body"><h3>Shutters</h3><p>Plantation shutters that add lasting value and character to your home.</p></div></article>
       <article class="card"><div class="ph" data-label="images/roller-shades.jpg"><img src="images/roller-shades.jpg" alt="Roller shades" onerror="this.remove()"></div><div class="body"><h3>Roller Shades</h3><p>Clean, modern lines in sheer, light-filtering or blackout fabrics.</p></div></article>
       <article class="card"><div class="ph" data-label="images/cellular-shades.jpg"><img src="images/cellular-shades.jpg" alt="Cellular honeycomb shades" onerror="this.remove()"></div><div class="body"><h3>Cellular Shades</h3><p>Honeycomb construction that insulates and helps lower energy bills.</p></div></article>
       <article class="card"><div class="ph" data-label="images/wood-blinds.jpg"><img src="images/wood-blinds.jpg" alt="Wood blinds" onerror="this.remove()"></div><div class="body"><h3>Wood &amp; Faux Wood Blinds</h3><p>Timeless warmth, with moisture-resistant options for kitchens and baths.</p></div></article>
       <article class="card"><div class="ph" data-label="images/roman-shades.jpg"><img src="images/roman-shades.jpg" alt="Woven Roman shades installed in a living room" onerror="this.remove()"></div><div class="body"><h3>Roman Shades</h3><p>Soft, tailored folds in hundreds of fabrics, patterns and textures.</p></div></article>
-      <article class="card"><div class="ph" data-label="images/shutters.jpg"><img src="images/shutters.jpg" alt="Plantation shutters" onerror="this.remove()"></div><div class="body"><h3>Shutters</h3><p>Plantation shutters that add lasting value and character to your home.</p></div></article>
-      <article class="card"><div class="ph" data-label="images/motorized.jpg"><img src="images/roman-shades.webp" style="object-position:center 25%" alt="Motorized smart shades" onerror="this.remove()"></div><div class="body"><h3>Motorized &amp; Smart</h3><p>Control by remote, app, schedule or voice. Cord-free and child-safe.</p></div></article>
+      <article class="card"><div class="ph" data-label="images/motorized.jpg"><img src="images/motorized.jpg" alt="Motorized smart shades" onerror="this.remove()"></div><div class="body"><h3>Motorized &amp; Smart</h3><p>Control by remote, app, schedule or voice. Cord-free and child-safe.</p></div></article>
     </div>
   </div>
 </section>
@@ -280,22 +358,10 @@ footer a{text-decoration:none}footer a:hover{color:#fff}
     </div>
     <div class="about-grid">
       <div class="person rv">
-        <div class="flip" tabindex="0" onclick="this.classList.toggle('on')">
-          <div class="flip-in">
-            <div class="face ph" data-label="images/ivan.jpg"><img src="images/ivan.jpg" alt="Ivan today" onerror="this.remove()"></div>
-            <div class="face back ph" data-label="images/ivan-baby.jpg"><img src="images/ivan-baby.jpg" alt="Ivan as a baby" onerror="this.remove()"><span class="tag">Baby Ivan</span></div>
-          </div>
-        </div>
-        <div><h3>Ivan</h3><p class="role">Window covering expert · 40 years</p><p>Ivan has spent four decades in blinds and window coverings. He has seen every fabric, mechanism and tricky window, and he'll measure, recommend and install it the right way.</p><p class="hint">Tap or hover the photo to see Ivan as a baby 👶</p></div>
+        <div><h3>Ivan</h3><p class="role">Window covering expert · 40 years</p><p>Ivan has spent four decades in blinds and window coverings. He has seen every fabric, mechanism and tricky window, and he'll measure, recommend and install it the right way.</p></div>
       </div>
       <div class="person rv">
-        <div class="flip" tabindex="0" onclick="this.classList.toggle('on')">
-          <div class="flip-in">
-            <div class="face ph" data-label="images/maryann.jpg"><img src="images/maryann.jpg" alt="Maryann today" onerror="this.remove()"></div>
-            <div class="face back ph" data-label="images/maryann-baby.jpg"><img src="images/maryann-baby.jpg" alt="Maryann as a baby" onerror="this.remove()"><span class="tag">Baby Maryann</span></div>
-          </div>
-        </div>
-        <div><h3>Maryann</h3><p class="role">Runs the shop · Co-owner</p><p>Maryann keeps the shop running smoothly, from orders and scheduling to making sure every customer is looked after from first call to final install.</p><p class="hint">Tap or hover the photo to see Maryann as a baby 👶</p></div>
+        <div><h3>Maryann</h3><p class="role">Runs the shop · Co-owner</p><p>Maryann keeps the shop running smoothly, from orders and scheduling to making sure every customer is looked after from first call to final install.</p></div>
       </div>
     </div>
     <div class="stats rv">
@@ -332,7 +398,7 @@ footer a{text-decoration:none}footer a:hover{color:#fff}
 
 <section id="gallery" style="background:#fff">
   <div class="wrap">
-    <div class="center"><p class="eyebrow">Gallery</p><h2>Recent projects</h2></div>
+    <div class="center"><p class="eyebrow">Gallery</p><h2>Recent installs</h2><p class="lead">Real homes, measured and installed by Ivan.</p></div>
     <div class="gallery">
       <div class="ph" data-label="images/gallery-1.jpg"><img src="images/gallery-1.jpg" alt="Living room window treatments" onerror="this.remove()"></div>
       <div class="ph" data-label="images/gallery-2.jpg"><img src="images/gallery-2.jpg" alt="Bedroom blackout shades" onerror="this.remove()"></div>

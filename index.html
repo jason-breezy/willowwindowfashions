@@ -194,6 +194,10 @@ nav ul{gap:22px}.logo{margin-right:28px}
   nav ul{display:none;position:absolute;top:72px;left:0;right:0;background:var(--cream);flex-direction:column;padding:20px;border-bottom:1px solid var(--line);gap:18px}
   nav ul.open{display:flex}
 }
+.card.feature{outline:1px solid var(--gold);outline-offset:-1px}
+.card.feature h3{color:var(--plum-2)}
+.card.feature a{color:var(--plum-2);font-weight:600;text-decoration:none}
+.sig{position:absolute;top:14px;left:14px;z-index:2;background:var(--gold);color:#1f1c19;font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600;padding:6px 12px;border-radius:2px}
 /* shutter collection */
 .shut{background:#1f1c19;color:#efe8dc;padding:110px 0}
 .shut h2{color:#fff}.shut .eyebrow{color:var(--gold)}
@@ -245,7 +249,7 @@ nav ul{gap:22px}.logo{margin-right:28px}
     <nav>
       <button class="burger" aria-label="Menu" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
       <ul id="menu" onclick="this.classList.remove('open')">
-        <li><a href="#shutters">Shutters</a></li>
+        <li><a href="#shutters">Plantation Shutters</a></li>
         <li><a href="#products">Products</a></li>
         <li><a href="#about">Our Story</a></li>
         <li><a href="#process">How It Works</a></li>
@@ -264,10 +268,10 @@ nav ul{gap:22px}.logo{margin-right:28px}
     <div>
       <p class="eyebrow">Custom window fashions · Bayville, NJ</p>
       <h1>Window fashions, beautifully made for your home.</h1>
-      <p>Blinds, shades, motorized coverings and our signature plantation shutters, measured and installed by Ivan, who learned the trade at Levolor in 1978 and founded Willow in 1988. Serving the Jersey Shore from Bayville since 2000.</p>
+      <p>Our signature plantation shutters, plus blinds, shades and motorized coverings, all measured and installed by Ivan, who learned the trade at Levolor in 1978 and founded Willow in 1988. Serving the Jersey Shore from Bayville since 2000.</p>
       <div class="cta">
         <a class="btn" href="#quote">Book a Free Consultation</a>
-        <a class="btn ghost" href="#gallery">See Our Work</a>
+        <a class="btn ghost" href="#shutters">Plantation Shutters</a>
       </div>
       <div><a class="gbadge" href="https://www.google.com/maps/search/Willow+Window+Fashions+Bayville+NJ" target="_blank" rel="noopener"><span class="g">G</span><span class="s">★★★★★</span> Rated on Google</a></div>
       <div class="badges"><span>Free in-home measuring</span><span>Professional installation</span><span>Fast, friendly quotes</span></div>
@@ -323,12 +327,12 @@ nav ul{gap:22px}.logo{margin-right:28px}
       <p class="lead">From light-filtering to total blackout, classic to fully automated. We'll help you pick what fits your home and your budget.</p>
     </div>
     <div class="grid3">
+      <article class="card feature"><div class="ph" data-label="images/shutters.jpg"><img src="images/shutters.jpg" alt="Plantation shutters installed by Willow" onerror="this.remove()"><span class="sig">Signature</span></div><div class="body"><h3>Plantation Shutters</h3><p>Our specialty. Custom-built and expertly installed shutters that add lasting value, character and light control. <a href="#shutters">Learn more →</a></p></div></article>
       
       <article class="card"><div class="ph" data-label="images/roller-shades.jpg"><img src="images/roller-shades.jpg" alt="Roller shades" onerror="this.remove()"></div><div class="body"><h3>Roller Shades</h3><p>Clean, modern lines in sheer, light-filtering or blackout fabrics.</p></div></article>
       <article class="card"><div class="ph" data-label="images/cellular-shades.jpg"><img src="images/cellular-shades.jpg" alt="Cellular honeycomb shades" onerror="this.remove()"></div><div class="body"><h3>Cellular Shades</h3><p>Honeycomb construction that insulates and helps lower energy bills.</p></div></article>
       <article class="card"><div class="ph" data-label="images/wood-blinds.jpg"><img src="images/wood-blinds.jpg" alt="Wood blinds" onerror="this.remove()"></div><div class="body"><h3>Wood &amp; Faux Wood Blinds</h3><p>Timeless warmth, with moisture-resistant options for kitchens and baths.</p></div></article>
       <article class="card"><div class="ph" data-label="images/roman-shades.jpg"><img src="images/roman-shades.jpg" alt="Woven Roman shades installed in a living room" onerror="this.remove()"></div><div class="body"><h3>Roman Shades</h3><p>Soft, tailored folds in hundreds of fabrics, patterns and textures.</p></div></article>
-      <article class="card"><div class="ph" data-label="images/shutters.jpg"><img src="images/shutters.jpg" alt="Plantation shutters" onerror="this.remove()"></div><div class="body"><h3>Shutters</h3><p>Plantation shutters that add lasting value and character to your home.</p></div></article>
       <article class="card"><div class="ph" data-label="images/motorized.jpg"><img src="images/motorized.jpg" alt="Motorized smart shades" onerror="this.remove()"></div><div class="body"><h3>Motorized &amp; Smart</h3><p>Control by remote, app, schedule or voice. Cord-free and child-safe.</p></div></article>
     </div>
   </div>

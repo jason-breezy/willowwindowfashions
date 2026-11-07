@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Willow Window Fashions | Custom Blinds, Shades & Window Coverings</title>
+<meta name="description" content="Custom blinds, shades, shutters and motorized window coverings with free in-home consultation, expert measuring and professional installation. Willow Window Fashions.">
+<link rel="canonical" href="https://www.willowwindowfashions.com/">
+<meta property="og:title" content="Willow Window Fashions | Custom Blinds & Window Coverings">
+<meta property="og:description" content="Beautiful custom window treatments, measured and installed by experts. Book a free in-home consultation.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.willowwindowfashions.com/">
+<meta property="og:image" content="https://www.willowwindowfashions.com/images/hero.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --lilac:#b9a4d6; --lilac-soft:#f1ecf8; --plum:#3d2a5c; --plum-2:#5a3f85;
+  --cream:#fbf9f6; --ink:#2a2233; --muted:#6b6275; --line:#e4dcef; --gold:#c9a24b;
+  --radius:16px;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;line-height:1.1;color:var(--plum)}
+h1{font-size:clamp(2.6rem,6vw,4.6rem);font-weight:600}
+h2{font-size:clamp(2rem,4vw,3rem);font-weight:600}
+h3{font-size:1.5rem;font-weight:600}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+section{padding:84px 0}
+.eyebrow{text-transform:uppercase;letter-spacing:.16em;font-size:.75rem;font-weight:600;color:var(--plum-2);margin-bottom:12px}
+.lead{color:var(--muted);font-size:1.1rem;max-width:620px}
+.center{text-align:center}.center .lead{margin:14px auto 0}
+.btn{display:inline-block;background:var(--plum);color:#fff;text-decoration:none;padding:14px 28px;border-radius:999px;font-weight:600;border:2px solid var(--plum);cursor:pointer;font:inherit;font-weight:600;transition:.2s}
+.btn:hover{background:var(--plum-2);border-color:var(--plum-2)}
+.btn.ghost{background:transparent;color:var(--plum)}
+.btn.ghost:hover{background:var(--plum);color:#fff}
+
+/* nav */
+header{position:sticky;top:0;z-index:50;background:rgba(251,249,246,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{font-family:"Cormorant Garamond",serif;font-size:1.7rem;font-weight:700;color:var(--plum);text-decoration:none}
+.logo span{color:var(--lilac);font-style:italic}
+nav ul{display:flex;gap:26px;list-style:none;padding:0;align-items:center}
+nav a{text-decoration:none;font-size:.95rem;font-weight:500}
+nav a:hover{color:var(--plum-2)}
+.nav .btn{padding:10px 20px;font-size:.9rem;color:#fff}
+.burger{display:none;background:none;border:0;font-size:1.8rem;color:var(--plum);cursor:pointer}
+
+/* image placeholders: real <img> shows when file exists, tinted block otherwise */
+.ph{position:relative;background:linear-gradient(135deg,var(--lilac-soft),var(--lilac));overflow:hidden;border-radius:var(--radius)}
+.ph::after{content:attr(data-label);position:absolute;inset:0;display:grid;place-items:center;color:var(--plum);font-size:.85rem;opacity:.55;text-align:center;padding:10px;z-index:0}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
+
+/* hero */
+.hero{padding:70px 0 90px;background:radial-gradient(circle at 85% 10%,var(--lilac-soft),transparent 55%)}
+.hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center}
+.hero p{margin:22px 0 32px;font-size:1.15rem;color:var(--muted);max-width:520px}
+.hero .cta{display:flex;gap:14px;flex-wrap:wrap}
+.hero .ph{aspect-ratio:4/5}
+.badges{display:flex;gap:22px;flex-wrap:wrap;margin-top:34px;font-size:.9rem;color:var(--plum-2);font-weight:500}
+.badges span::before{content:"✓ ";color:var(--gold);font-weight:700}
+
+/* products */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:48px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:.25s}
+.card:hover{transform:translateY(-4px);box-shadow:0 18px 40px -22px rgba(61,42,92,.5)}
+.card .ph{aspect-ratio:4/3;border-radius:0}
+.card div.body{padding:22px 24px 26px}
+.card p{color:var(--muted);font-size:.95rem;margin-top:8px}
+
+/* feature band */
+.band{background:var(--plum);color:#fff}
+.band h2,.band h3{color:#fff}.band .eyebrow{color:var(--lilac)}.band .lead{color:#d9cdee}
+.feat{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-top:48px}
+.feat div{border-top:2px solid var(--lilac);padding-top:18px}
+.feat p{color:#d9cdee;font-size:.95rem;margin-top:6px}
+
+/* process */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;margin-top:48px;counter-reset:s}
+.step{counter-increment:s;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px 24px}
+.step::before{content:counter(s);display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:var(--lilac-soft);color:var(--plum);font-family:"Cormorant Garamond",serif;font-size:1.4rem;font-weight:700;margin-bottom:16px}
+.step p{color:var(--muted);font-size:.95rem;margin-top:6px}
+
+/* gallery */
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:48px}
+.gallery .ph{aspect-ratio:1}
+.gallery .ph:nth-child(1),.gallery .ph:nth-child(6){grid-column:span 2;aspect-ratio:2/1}
+
+/* reviews */
+.reviews{background:var(--lilac-soft)}
+.rev{background:#fff;border-radius:var(--radius);padding:28px;border:1px solid var(--line)}
+.stars{color:var(--gold);letter-spacing:3px;margin-bottom:10px}
+.rev p{font-size:.98rem}
+.rev .who{margin-top:16px;font-weight:600;color:var(--plum);font-size:.9rem}
+.rev .who small{display:block;color:var(--muted);font-weight:400}
+.note{margin-top:22px;font-size:.78rem;color:var(--muted);text-align:center}
+
+/* faq */
+.faq{max-width:780px;margin:44px auto 0}
+details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 22px;margin-bottom:12px}
+summary{cursor:pointer;font-weight:600;color:var(--plum);list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::after{content:"+";font-size:1.4rem;line-height:1;color:var(--plum-2)}
+details[open] summary::after{content:"–"}
+details p{margin-top:10px;color:var(--muted);font-size:.95rem}
+
+/* contact */
+.contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:start}
+.info li{list-style:none;margin:14px 0;color:var(--muted)}
+.info b{color:var(--plum);display:block;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase}
+form{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px;display:grid;gap:14px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{font-size:.82rem;font-weight:600;color:var(--plum);display:grid;gap:6px}
+input,select,textarea{font:inherit;padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:var(--cream);color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--lilac);border-color:var(--lilac)}
+footer{background:var(--ink);color:#bdb3c9;padding:48px 0 28px;font-size:.9rem}
+footer .logo{color:#fff}
+.foot{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}
+footer a{text-decoration:none}footer a:hover{color:#fff}
+.copy{margin-top:30px;padding-top:18px;border-top:1px solid #4a4056;font-size:.8rem}
+
+
+/* about */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:34px;margin-top:48px}
+.person{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px;display:grid;grid-template-columns:200px 1fr;gap:24px;align-items:center}
+.flip{perspective:900px;aspect-ratio:3/4;cursor:pointer;outline-offset:4px}
+.flip-in{position:relative;width:100%;height:100%;transition:transform .7s;transform-style:preserve-3d}
+.flip:hover .flip-in,.flip:focus .flip-in,.flip.on .flip-in{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.face.back{transform:rotateY(180deg)}
+.tag{position:absolute;left:10px;bottom:10px;z-index:2;background:rgba(61,42,92,.88);color:#fff;font-size:.7rem;padding:4px 10px;border-radius:999px;letter-spacing:.06em}
+.person h3{margin-bottom:2px}.person .role{color:var(--plum-2);font-weight:600;font-size:.85rem;margin-bottom:10px}
+.person p{color:var(--muted);font-size:.95rem}
+.hint{font-size:.75rem;color:var(--muted);margin-top:10px}
+.stats{display:flex;justify-content:center;gap:56px;flex-wrap:wrap;margin:48px 0 0}
+.stats div{text-align:center}.stats b{display:block;font-family:"Cormorant Garamond",serif;font-size:3.2rem;color:var(--plum);line-height:1}
+.stats span{font-size:.85rem;color:var(--muted)}
+.story{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;margin-top:56px;align-items:center}
+.story .ph{aspect-ratio:4/3}
+.tl{list-style:none;padding:0;border-left:2px solid var(--lilac);margin-left:8px}
+.tl li{position:relative;padding:0 0 22px 24px}
+.tl li::before{content:"";position:absolute;left:-8px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--plum);border:3px solid var(--cream)}
+.tl b{color:var(--plum);display:block}.tl span{color:var(--muted);font-size:.93rem}
+/* brands */
+.brands{padding:34px 0;border-block:1px solid var(--line);background:#fff;overflow:hidden}
+.brands small{display:block;text-align:center;text-transform:uppercase;letter-spacing:.16em;font-size:.72rem;color:var(--muted);margin-bottom:16px}
+.marq{display:flex;gap:64px;width:max-content;animation:scroll 32s linear infinite}
+.brands:hover .marq{animation-play-state:paused}
+.marq span{font-family:"Cormorant Garamond",serif;font-size:1.9rem;font-weight:600;color:#a698bd;white-space:nowrap;letter-spacing:.04em}
+.marq img{height:38px;opacity:.6;filter:grayscale(1)}
+@keyframes scroll{to{transform:translateX(-50%)}}
+/* google badge + floating call */
+.gbadge{display:inline-flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 16px;text-decoration:none;font-size:.85rem;font-weight:600;color:var(--ink);margin-top:22px}
+.gbadge .g{font-weight:700;color:#4285f4}.gbadge .s{color:var(--gold);letter-spacing:2px}
+.fab{position:fixed;right:18px;bottom:18px;z-index:60;background:var(--plum);color:#fff;text-decoration:none;font-weight:600;padding:14px 22px;border-radius:999px;box-shadow:0 10px 30px -8px rgba(61,42,92,.7);display:none}
+.fab.show{display:block;animation:pop .4s}
+@keyframes pop{from{transform:scale(.8);opacity:0}}
+/* reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s,transform .8s}
+.rv.in{opacity:1;transform:none}
+.hero .ph{animation:float 7s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-10px)}}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}.marq,.hero .ph{animation:none}}
+@media(max-width:900px){.about-grid,.story{grid-template-columns:1fr}}
+@media(max-width:560px){.person{grid-template-columns:1fr}.flip{max-width:220px;margin:auto}.stats{gap:30px}}
+@media(max-width:900px){
+  section{padding:60px 0}
+  .hero-grid,.contact-grid{grid-template-columns:1fr;gap:36px}
+  .grid3,.feat,.steps{grid-template-columns:1fr 1fr}
+  .gallery{grid-template-columns:1fr 1fr}
+  .gallery .ph:nth-child(1),.gallery .ph:nth-child(6){grid-column:span 2}
+  .burger{display:block}
+  nav ul{display:none;position:absolute;top:72px;left:0;right:0;background:var(--cream);flex-direction:column;padding:20px;border-bottom:1px solid var(--line);gap:18px}
+  nav ul.open{display:flex}
+}
+@media(max-width:560px){
+  .grid3,.feat,.steps,.row{grid-template-columns:1fr}
+}
+</style>
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org","@type":"HomeAndConstructionBusiness",
+ "name":"Willow Window Fashions","url":"https://www.willowwindowfashions.com/",
+ "description":"Custom blinds, shades, shutters and motorized window coverings with in-home consultation and professional installation.",
+ "telephone":"+1-732-237-9100","email":"ivan633@msn.com",
+ "address":{"@type":"PostalAddress","streetAddress":"655 US-9, Roberts Plaza","addressLocality":"Bayville","addressRegion":"NJ","postalCode":"08721","addressCountry":"US"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"2"},
+ "areaServed":"Ocean County & Monmouth County, NJ","priceRange":"$$"
+}
+</script>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top">Willow <span>Window Fashions</span></a>
+    <nav>
+      <button class="burger" aria-label="Menu" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
+      <ul id="menu" onclick="this.classList.remove('open')">
+        <li><a href="#products">Products</a></li>
+        <li><a href="#about">Our Story</a></li>
+        <li><a href="#process">How It Works</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a class="btn" href="#quote">Free Consultation</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Custom window coverings</p>
+      <h1>Window treatments that finish the room.</h1>
+      <p>Blinds, shades, shutters and smart motorized coverings, measured, made and installed by people who care how your home looks and feels.</p>
+      <div class="cta">
+        <a class="btn" href="#quote">Book a Free Consultation</a>
+        <a class="btn ghost" href="#gallery">See Our Work</a>
+      </div>
+      <div><a class="gbadge" href="https://www.google.com/maps/search/Willow+Window+Fashions+Bayville+NJ" target="_blank" rel="noopener"><span class="g">G</span><span class="s">★★★★★</span> Rated on Google</a></div>
+      <div class="badges"><span>Free in-home measuring</span><span>Professional installation</span><span>Fast, friendly quotes</span></div>
+    </div>
+    <div class="ph" data-label="Add images/hero.jpg"><img src="images/hero.jpg" alt="Custom blinds in a bright living room" onerror="this.remove()"></div>
+  </div>
+</section>
+
+<div class="brands">
+  <small>Brands we work with</small>
+  <!-- Edit these names to the brands you actually carry. For real logos, replace a <span> with <img src="images/brands/name.svg" alt="Name"> -->
+  <div class="marq">
+    <span>Hunter Douglas</span><span>Lutron</span><span>Graber</span><span>Norman</span><span>Springs Window Fashions</span><span>Alta</span>
+    <span>Hunter Douglas</span><span>Lutron</span><span>Graber</span><span>Norman</span><span>Springs Window Fashions</span><span>Alta</span>
+  </div>
+</div>
+
+<section id="products">
+  <div class="wrap">
+    <div class="center">
+      <p class="eyebrow">What we offer</p>
+      <h2>A covering for every window and every style</h2>
+      <p class="lead">From light-filtering to total blackout, classic to fully automated. We'll help you pick what fits your home and your budget.</p>
+    </div>
+    <div class="grid3">
+      <article class="card"><div class="ph" data-label="images/roller-shades.jpg"><img src="images/roller-shades.jpg" alt="Roller shades" onerror="this.remove()"></div><div class="body"><h3>Roller Shades</h3><p>Clean, modern lines in sheer, light-filtering or blackout fabrics.</p></div></article>
+      <article class="card"><div class="ph" data-label="images/cellular-shades.jpg"><img src="images/cellular-shades.jpg" alt="Cellular honeycomb shades" onerror="this.remove()"></div><div class="body"><h3>Cellular Shades</h3><p>Honeycomb construction that insulates and helps lower energy bills.</p></div></article>
+      <article class="card"><div class="ph" data-label="images/wood-blinds.jpg"><img src="images/wood-blinds.jpg" alt="Wood blinds" onerror="this.remove()"></div><div class="body"><h3>Wood &amp; Faux Wood Blinds</h3><p>Timeless warmth, with moisture-resistant options for kitchens and baths.</p></div></article>
+      <article class="card"><div class="ph" data-label="images/roman-shades.webp"><img src="images/roman-shades.webp" style="object-position:center 25%" alt="Relaxed Roman shade in a living room" onerror="this.remove()"></div><div class="body"><h3>Roman Shades</h3><p>Soft, tailored folds in hundreds of fabrics, patterns and textures.</p></div></article>
+      <article class="card"><div class="ph" data-label="images/shutters.jpg"><img src="images/shutters.jpg" alt="Plantation shutters" onerror="this.remove()"></div><div class="body"><h3>Shutters</h3><p>Plantation shutters that add lasting value and character to your home.</p></div></article>
+      <article class="card"><div class="ph" data-label="images/motorized.jpg"><img src="images/motorized.jpg" alt="Motorized smart shades" onerror="this.remove()"></div><div class="body"><h3>Motorized &amp; Smart</h3><p>Control by remote, app, schedule or voice. Cord-free and child-safe.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="center">
+      <p class="eyebrow">Why Willow</p>
+      <h2>Done right, from first visit to final hang</h2>
+    </div>
+    <div class="feat">
+      <div><h3>Expert measuring</h3><p>Every window measured precisely, so everything fits perfectly.</p></div>
+      <div><h3>Real samples at home</h3><p>See fabrics and finishes in your own light before you decide.</p></div>
+      <div><h3>Clean installation</h3><p>Tidy, careful installers who respect your home.</p></div>
+      <div><h3>Child-safe options</h3><p>Cordless and motorized designs for peace of mind.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <div class="center">
+      <p class="eyebrow">Our story</p>
+      <h2>A family business, run by a husband and wife</h2>
+      <p class="lead">Willow Window Fashions is family-owned. When you call, you talk to the people whose name is on the door.</p>
+    </div>
+    <div class="about-grid">
+      <div class="person rv">
+        <div class="flip" tabindex="0" onclick="this.classList.toggle('on')">
+          <div class="flip-in">
+            <div class="face ph" data-label="images/ivan.jpg"><img src="images/ivan.jpg" alt="Ivan today" onerror="this.remove()"></div>
+            <div class="face back ph" data-label="images/ivan-baby.jpg"><img src="images/ivan-baby.jpg" alt="Ivan as a baby" onerror="this.remove()"><span class="tag">Baby Ivan</span></div>
+          </div>
+        </div>
+        <div><h3>Ivan</h3><p class="role">Window covering expert · 40 years</p><p>Ivan has spent four decades in blinds and window coverings. He has seen every fabric, mechanism and tricky window, and he'll measure, recommend and install it the right way.</p><p class="hint">Tap or hover the photo to see Ivan as a baby 👶</p></div>
+      </div>
+      <div class="person rv">
+        <div class="flip" tabindex="0" onclick="this.classList.toggle('on')">
+          <div class="flip-in">
+            <div class="face ph" data-label="images/maryann.jpg"><img src="images/maryann.jpg" alt="Maryann today" onerror="this.remove()"></div>
+            <div class="face back ph" data-label="images/maryann-baby.jpg"><img src="images/maryann-baby.jpg" alt="Maryann as a baby" onerror="this.remove()"><span class="tag">Baby Maryann</span></div>
+          </div>
+        </div>
+        <div><h3>Maryann</h3><p class="role">Runs the shop · Co-owner</p><p>Maryann keeps the shop running smoothly, from orders and scheduling to making sure every customer is looked after from first call to final install.</p><p class="hint">Tap or hover the photo to see Maryann as a baby 👶</p></div>
+      </div>
+    </div>
+    <div class="stats rv">
+      <div><b data-count="40">40</b><span>years of expertise</span></div>
+      <div><b>2</b><span>owners, one family</span></div>
+      <div><b>1</b><span>name on the door</span></div>
+    </div>
+    <div class="story">
+      <div class="rv">
+        <h3 style="font-size:2rem;margin-bottom:18px">How Willow came to be</h3>
+        <ul class="tl">
+          <li><b>[Year] · Learning the trade</b><span>[Where Ivan started and what first drew him to window coverings.]</span></li>
+          <li><b>[Year] · Four decades of craft</b><span>[Highlights from Ivan's career: shops, installs, notable jobs.]</span></li>
+          <li><b>[Year] · The pivot</b><span>[The turning point: why Ivan and Maryann decided to open their own shop.]</span></li>
+          <li><b>Today · Willow Window Fashions</b><span>Ivan's expertise and Maryann's shop-running know-how, together under one roof.</span></li>
+        </ul>
+      </div>
+      <div class="ph rv" style="aspect-ratio:4/5" data-label="images/ivan-maryann.jpg"><img src="images/ivan-maryann.jpg" style="object-position:center 20%" alt="Ivan and Maryann, owners of Willow Window Fashions" onerror="this.remove()"></div>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="wrap">
+    <div class="center"><p class="eyebrow">How it works</p><h2>Four easy steps</h2><p class="lead">No pressure, no guesswork.</p></div>
+    <div class="steps">
+      <div class="step"><h3>Book a visit</h3><p>Request a free consultation online or by phone.</p></div>
+      <div class="step"><h3>Consult &amp; measure</h3><p>We come to you with samples, advice and exact measurements.</p></div>
+      <div class="step"><h3>Custom made</h3><p>Your order is crafted to your exact windows and specs.</p></div>
+      <div class="step"><h3>Installed</h3><p>We install, test and show you how everything works.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery" style="background:#fff">
+  <div class="wrap">
+    <div class="center"><p class="eyebrow">Gallery</p><h2>Recent projects</h2></div>
+    <div class="gallery">
+      <div class="ph" data-label="images/gallery-1.jpg"><img src="images/gallery-1.jpg" alt="Living room window treatments" onerror="this.remove()"></div>
+      <div class="ph" data-label="images/gallery-2.jpg"><img src="images/gallery-2.jpg" alt="Bedroom blackout shades" onerror="this.remove()"></div>
+      <div class="ph" data-label="images/gallery-3.jpg"><img src="images/gallery-3.jpg" alt="Kitchen blinds" onerror="this.remove()"></div>
+      <div class="ph" data-label="images/gallery-4.jpg"><img src="images/gallery-4.jpg" alt="Home office shades" onerror="this.remove()"></div>
+      <div class="ph" data-label="images/gallery-5.jpg"><img src="images/gallery-5.jpg" alt="Dining room window coverings" onerror="this.remove()"></div>
+      <div class="ph" data-label="images/gallery-6.jpg"><img src="images/gallery-6.jpg" alt="Large window treatment" onerror="this.remove()"></div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" class="reviews">
+  <div class="wrap">
+    <div class="center"><p class="eyebrow">Kind words</p><h2>What homeowners are saying</h2></div>
+    <div class="grid3">
+      <div class="rev"><div class="stars">★★★★★</div><p>“We used Willow Window Fashions for our home in Point Pleasant and could not be happier. Ivan was very helpful with helping us decide which shades and blinds to use and came in at a very reasonable price compared to other quotes we received. Can’t recommend enough!”</p><div class="who">Chris S.<small>Google review · Point Pleasant</small></div></div>
+      <div class="rev"><div class="stars">★★★★★</div><p>“Willow walked through every room with us and nailed the style. The shades fit perfectly and the install took just one afternoon. Our living room feels brand new.”</p><div class="who">Sarah M.<small>Living room &amp; dining room</small></div></div>
+      <div class="rev"><div class="stars">★★★★★</div><p>“We went motorized in the bedrooms and love it. The blackout is incredible and I can open everything from my phone. Professional and on time.”</p><div class="who">David &amp; Karen L.<small>Motorized blackout shades</small></div></div>
+      <div class="rev"><div class="stars">★★★★★</div><p>“So many options, but they made it easy. The cellular shades have noticeably cut the afternoon heat in our sunroom. Highly recommend.”</p><div class="who">Priya R.<small>Cellular shades</small></div></div>
+      <div class="rev"><div class="stars">★★★★★</div><p>“Honest pricing, quick quote, beautiful faux wood blinds in the kitchen. The installers even cleaned up after themselves!”</p><div class="who">Michael T.<small>Faux wood blinds</small></div></div>
+      <div class="rev"><div class="stars">★★★★★</div><p>“Our plantation shutters are the best upgrade we've made. Great craftsmanship, and the team answered every question we had.”</p><div class="who">Jennifer W.<small>Plantation shutters</small></div></div>
+      <div class="rev"><div class="stars">★★★★★</div><p>“Cordless everything for the nursery, and they were so thoughtful about safety. Gorgeous fabrics and fantastic service.”</p><div class="who">Amanda B.<small>Nursery &amp; bedrooms</small></div></div>
+    </div>
+    <p class="center" style="margin-top:28px"><a class="btn ghost" href="https://www.google.com/maps/search/Willow+Window+Fashions+Bayville+NJ" target="_blank" rel="noopener">Read all reviews on Google</a></p>
+    <p class="note">Sample reviews for layout purposes. Replace with real customer reviews before launch.</p>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="center"><p class="eyebrow">Questions</p><h2>Good to know</h2></div>
+    <div class="faq">
+      <details><summary>Is the consultation really free?</summary><p>Yes. We visit your home, show samples, measure and give you a quote at no charge or obligation.</p></details>
+      <details><summary>How long does it take to get my window coverings?</summary><p>Most custom orders arrive in roughly 2–4 weeks depending on the product. We'll give you a firm timeline with your quote.</p></details>
+      <details><summary>Do you install everything?</summary><p>Yes. Our team handles professional installation and shows you how to operate everything.</p></details>
+      <details><summary>Are cordless and motorized options available?</summary><p>Nearly all of our products are available cordless, and many can be motorized and connected to your smart home.</p></details>
+      <details><summary>Which areas do you serve?</summary><p>We're based in Bayville and serve Ocean County, Monmouth County and the Jersey Shore. Not sure if you're in range? Just ask.</p></details>
+      <details><summary>Do you offer warranties?</summary><p>Our products are backed by manufacturer warranties, and we stand behind our installation. Ask us for details.</p></details>
+    </div>
+  </div>
+</section>
+
+<section id="quote" style="background:var(--lilac-soft)">
+  <div class="wrap contact-grid">
+    <div>
+      <p class="eyebrow">Get started</p>
+      <h2>Book your free consultation</h2>
+      <p class="lead" style="margin-top:14px">Tell us a little about your project and we'll be in touch within one business day.</p>
+      <ul class="info" style="padding:0;margin-top:24px">
+        <li><b>Phone</b><a href="tel:+17322379100">(732) 237-9100</a></li>
+        <li><b>Email</b><a href="mailto:ivan633@msn.com">ivan633@msn.com</a></li>
+        <li><b>Showroom</b><a href="https://www.google.com/maps/search/Willow+Window+Fashions+Bayville+NJ" target="_blank" rel="noopener">Roberts Plaza, 655 US-9<br>Bayville, NJ 08721</a></li>
+        <li><b>Service area</b>Ocean &amp; Monmouth County and the Jersey Shore</li>
+        <li><b>Hours</b>Call or book online for an appointment</li>
+      </ul>
+    </div>
+    <!-- Leads are emailed to Ivan via FormSubmit. The first submission sends a one-time activation email to ivan633@msn.com -->
+    <form action="https://formsubmit.co/ivan633@msn.com" method="POST">
+      <div class="row">
+        <label>Name<input name="name" required autocomplete="name"></label>
+        <label>Phone<input name="phone" type="tel" autocomplete="tel"></label>
+      </div>
+      <input type="hidden" name="_subject" value="New consultation request - willowwindowfashions.com">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="https://www.willowwindowfashions.com/thanks.html">
+      <input type="text" name="_honey" style="display:none">
+      <label>Email<input name="email" type="email" required autocomplete="email"></label>
+      <div class="row">
+        <label>What are you interested in?
+          <select name="product"><option>Not sure yet</option><option>Roller shades</option><option>Cellular shades</option><option>Wood / faux wood blinds</option><option>Roman shades</option><option>Shutters</option><option>Motorized / smart</option></select>
+        </label>
+        <label>Number of windows<input name="windows" type="number" min="1" placeholder="e.g. 6"></label>
+      </div>
+      <label>Anything else we should know?<textarea name="message" rows="4"></textarea></label>
+      <button class="btn" type="submit">Request My Free Consultation</button>
+    </form>
+  </div>
+</section>
+</main>
+
+<a class="fab" id="fab" href="tel:+17322379100">📞 Call us</a>
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div><a class="logo" href="#top">Willow <span>Window Fashions</span></a><p style="margin-top:8px;max-width:320px">Roberts Plaza, 655 US-9, Bayville, NJ 08721<br><br>Custom blinds, shades and window coverings, beautifully made and expertly installed.</p></div>
+      <div><p><a href="#products">Products</a><br><a href="#process">How It Works</a><br><a href="#gallery">Gallery</a><br><a href="#faq">FAQ</a></p></div>
+      <div><p>(732) 237-9100<br>ivan633@msn.com<br>www.willowwindowfashions.com</p></div>
+    </div>
+    <p class="copy">© <span id="yr">2026</span> Willow Window Fashions. All rights reserved.</p>
+  </div>
+</footer>
+<script>document.getElementById('yr').textContent=new Date().getFullYear()</script>
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.card,.step,.rev,.feat div,.gallery .ph,details,.rv').forEach(el=>{el.classList.add('rv');io.observe(el)});
+const fab=document.getElementById('fab');addEventListener('scroll',()=>fab.classList.toggle('show',scrollY>600),{passive:true});
+</script>
+</body>
+</html>
